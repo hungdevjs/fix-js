@@ -2746,14 +2746,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
           if (addButton) {
             addButton.addEventListener('click', function () {
+              let deleteItem = null
               deleteButton = subcontentItem.querySelectorAll('.js-delete-ss');
 
-              deleteButton.forEach(function (item) {
-                item.classList.remove('hide');
-              });
               var clone = document.createElement('div');
 
               if (clone && content[subcontentIndex]) {
+                content[subcontentIndex].appendChild(clone);
+
                 clone.classList.add('form__select-duplicate');
                 clone.classList.add('js-duplicate');
                 clone.innerHTML = html;
@@ -2762,6 +2762,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                 var inputs = clone.querySelectorAll('input, textarea');
                 var inputName = clone.querySelectorAll('.has-name');
                 var question = clone.querySelectorAll('.question');
+
+                deleteButton = subcontentItem.querySelectorAll('.js-delete-ss');
+                deleteButton.forEach(function (item) {
+                  item.classList.remove('hide');
+                  item.addEventListener("click", () => {
+                    deleteItem = item.closest(".form__subitem")
+                    console.log({ deleteItem })
+                  })
+                });
 
                 if (question.length > 0) {
                   question.forEach(function (questionItem) {
@@ -2806,7 +2815,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     if (clone) {
                       if (isPersonalData) {
                         $('.btn-submit-ct').click(function () {
-                          clone.remove();
+                          deleteItem && deleteItem.remove()
                           hideIndex();
                         })
                       } else {
@@ -2815,9 +2824,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                       }
                       if (hasNumItems) {
                         $('.btn-submit-ct').click(function () {
-                          clone.remove();
-                          var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
-                          subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
+                          const numItems = $('.toogledate__text--display').find(".form__subitem")
+                          $('.toogledate__text--display').find('.count')[0].innerHTML = numItems.length
                           hideIndex();
                         })
                       }
@@ -2864,8 +2872,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     }
                   });
                 }
-
-                content[subcontentIndex].appendChild(clone);
 
                 if (hasDuplicatedName) {
                   var mainParent = content[subcontentIndex].querySelectorAll('.js-duplicate');
