@@ -1516,6 +1516,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
           if (addButton) {
             addButton.addEventListener('click', function () {
+              let deleteItem = null
+              let parent = null
               var html = addButton.parentElement.previousElementSibling.querySelector('.js-duplicate').innerHTML;
               var clone = document.createElement('div');
               var deleteButtonFirst = subcontentItem.querySelector('.js-delete-ss');
@@ -1525,6 +1527,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
               }
 
               if (clone && content) {
+                content.appendChild(clone);
                 clone.classList.add('form__select-duplicate');
                 clone.classList.add('js-duplicate');
                 clone.innerHTML = html;
@@ -1532,6 +1535,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                 var inputNumber = clone.querySelectorAll('.js-input-number');
                 var inputName = clone.querySelectorAll('.has-name');
                 var inputs = clone.querySelectorAll('input, textarea');
+
+                deleteButton = subcontentItem.querySelectorAll('.js-delete-ss');
+                deleteButton.forEach(function (item) {
+                  item.classList.remove('hide');
+                  item.addEventListener("click", () => {
+                    deleteItem = item.closest(".form__subitem")
+                    parent = deleteItem.closest(".js-personal-data-count")
+                  })
+                });
 
                 if (inputNumber.length > 0) {
                   inputNumber.forEach(function (item) {
@@ -1562,18 +1574,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     if (clone) {
                       if (isPersonalData) {
                         $('.btn-submit-ct').click(function () {
-                          clone.remove();
+                          // clone.remove();
+                          deleteItem && deleteItem.remove()
                           hideIndex();
                         })
                       } else {
                         clone.remove();
                         hideIndex();
-                      }
+                      } 
                       if (hasNumItems) {
                         $('.btn-submit-ct').click(function () {
-                          clone.remove();
-                          var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
-                          subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
+                          deleteItem && deleteItem.remove()
+
+                          if (parent) {
+                            const numItems = $(parent).find(".form__subitem")
+                            $(parent).prev()[0].innerHTML = `<span class="count">${numItems.length}</span>回`
+                          }
                           hideIndex();
                         })
                       }
@@ -1622,7 +1638,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   });
                 }
 
-                content.appendChild(clone);
               }
 
               label = subcontentItem.querySelectorAll('.js-label-ss');
@@ -2747,6 +2762,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
           if (addButton) {
             addButton.addEventListener('click', function () {
               let deleteItem = null
+              let parent = null
               deleteButton = subcontentItem.querySelectorAll('.js-delete-ss');
 
               var clone = document.createElement('div');
@@ -2768,7 +2784,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   item.classList.remove('hide');
                   item.addEventListener("click", () => {
                     deleteItem = item.closest(".form__subitem")
-                    console.log({ deleteItem })
+                    parent = deleteItem.closest(".js-personal-data-count")
                   })
                 });
 
@@ -2824,8 +2840,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                       }
                       if (hasNumItems) {
                         $('.btn-submit-ct').click(function () {
-                          const numItems = $('.toogledate__text--display').find(".form__subitem")
-                          $('.toogledate__text--display').find('.count')[0].innerHTML = numItems.length
+                          deleteItem && deleteItem.remove()
+
+                          if (parent) {
+                            const numItems = $(parent).find(".form__subitem")
+                            $(parent).prev()[0].innerHTML = `<span class="count">${numItems.length}</span>回`
+                          }
                           hideIndex();
                         })
                       }
