@@ -1473,8 +1473,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   if (hasNumItems) {
                     $('.btn-submit-ct').click(function () {
                       deleteParent.remove();
-                      var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
-                      subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
+                      // var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
+                      // subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
                       hideIndex();
                     })
                   }
@@ -1516,6 +1516,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
           if (addButton) {
             addButton.addEventListener('click', function () {
+              const container = $(addButton).parent()[0]
+              const parent1 = $(container).parent()[0]
+              
               let deleteItem = null
               let parent = null
               var html = addButton.parentElement.previousElementSibling.querySelector('.js-duplicate').innerHTML;
@@ -1544,6 +1547,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     parent = deleteItem.closest(".js-personal-data-count")
                   })
                 });
+
+                if (parent1.classList.contains("js-personal-data-count")) {
+                  const numItems1 = $(parent1).find(".form__subitem")
+                  $(parent1).prev()[0].innerHTML = `<span class="count">${numItems1.length}</span>回`
+                }
 
                 if (inputNumber.length > 0) {
                   inputNumber.forEach(function (item) {
@@ -2710,8 +2718,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   if (hasNumItems) {
                     $('.btn-submit-ct').click(function () {
                       deleteParent.remove();
-                      var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
-                      subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
+                      // var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
+                      // subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
                       hideIndex();
                     })
                   }
@@ -2761,6 +2769,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
           if (addButton) {
             addButton.addEventListener('click', function () {
+              const container = $(addButton).parent()[0]
+              const parent1 = $(container).parent()[0]
+
+              console.log(parent1.classList)
+
               let deleteItem = null
               let parent = null
               deleteButton = subcontentItem.querySelectorAll('.js-delete-ss');
@@ -2787,6 +2800,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     parent = deleteItem.closest(".js-personal-data-count")
                   })
                 });
+
+                if (parent1.classList.contains("js-personal-data-count")) {
+                  const numItems1 = $(parent1).find(".form__subitem")
+                  $(parent1).prev()[0].innerHTML = `<span class="count">${numItems1.length}</span>回`
+                }
 
                 if (question.length > 0) {
                   question.forEach(function (questionItem) {

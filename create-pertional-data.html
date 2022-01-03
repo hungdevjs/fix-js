@@ -375,8 +375,8 @@
     })
 
     $(document).on('click', '.js-add-ss', function () {
-        let toogleText = $(this).parents('div[class=toogledate__text--display]');
-        toogleText.find('.count').text(toogleText.find('.form__select-duplicate').length);
+        // let toogleText = $(this).parents('div[class=toogledate__text--display]');
+        // toogleText.find('.count').text(toogleText.find('.form__select-duplicate').length);
 
         let select2Last = $(this).parents('.form__select-container').find('.js-select2-fund-manager').last();
         select2Last.siblings('.select2').remove();
