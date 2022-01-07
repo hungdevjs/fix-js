@@ -1460,19 +1460,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
               deleteItem.addEventListener('click', function () {
                 var deleteParent = deleteItem.closest('.js-duplicate');
 
+                var closeBtns = [...document.getElementsByClassName("close-ct")]
+                closeBtns.forEach(btn => btn.addEventListener("click", () => {
+                  deleteParent = null
+                }))
+
                 if (deleteParent) {
                   if (isPersonalData) {
                     $('.btn-submit-ct').click(function () {
-                      deleteParent.remove();
+                      deleteParent && deleteParent.remove();
                       hideIndex();
                     })
                   } else {
-                    deleteParent.remove();
+                    deleteParent && deleteParent.remove();
                     hideIndex();
                   }
                   if (hasNumItems) {
                     $('.btn-submit-ct').click(function () {
-                      deleteParent.remove();
+                      deleteParent && deleteParent.remove();
                       // var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
                       // subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
                       hideIndex();
@@ -2705,19 +2710,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
               deleteItem.addEventListener('click', function () {
                 var deleteParent = deleteItem.closest('.js-duplicate');
 
+                var closeBtns = [...document.getElementsByClassName("close-ct")]
+                closeBtns.forEach(btn => btn.addEventListener("click", () => {
+                  deleteParent = null
+                }))
+
                 if (deleteParent) {
                   if (isPersonalData) {
                     $('.btn-submit-ct').click(function () {
-                      deleteParent.remove();
+                      deleteParent && deleteParent.remove();
                       hideIndex();
                     })
                   } else {
-                    deleteParent.remove();
+                    deleteParent && deleteParent.remove();
                     hideIndex();
                   }
                   if (hasNumItems) {
                     $('.btn-submit-ct').click(function () {
-                      deleteParent.remove();
+                      deleteParent && deleteParent.remove();
                       // var numItems = subcontentItem.querySelectorAll('.form__select-duplicate');
                       // subcontentItem.parentNode.querySelector('.count').innerHTML = numItems.length;
                       hideIndex();
