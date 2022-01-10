@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>パーソナルデータ変更申請</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&amp;family=Lato:wght@300;700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izimodal-1.6.0@1.6.1/css/iziModal.min.css">
+    <link rel="stylesheet" href="./css\main.css">
+    <link rel="stylesheet" href="./css\feature.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css" />
+</head>
+
+<body class="d-page">
+<!-- 以下ヘッダーの内容です -->
+<header class="d-header header"><a class="d-header__logo-link" href=""><img class="d-header__logo"
+                                                                            src="./img\logo-black.svg" alt="IR-navi"></a>
+    <div class="d-header__menu header__menu">
+        <div class="d-header__list">
+            <div class="d-header__item"><a class="d-header__link" href="">投資家保有状況</a></div>
+            <div class="d-header__item"><a class="d-header__link" href="">投資家ターゲティング</a></div>
+            <div class="d-header__item"><a class="d-header__link" href="">レポーティング</a></div>
+            <div class="d-header__item"><a class="d-header__link d-header__link--active" href="">マイリスト</a></div>
+            <div class="d-header__item"><a class="d-header__link" href="">投資家コンタクト</a></div>
+            <div class="d-header__item"><a class="d-header__link" href="">投資家プロフィール</a></div>
+            <div class="d-header__item"><a class="d-header__link" href="">個人IR</a></div>
+            <div class="d-header__item dropdownPrimary">
+                <div class="d-header__wrap header__wrap"><a class="d-header__link d-header__link--sub"
+                                                            href="">プレミアム優待倶楽部</a><img class="sp" src="./img\icons\icon-white-caret.svg"></div>
+                <div class="d-header__sublist header__sublist--primary"><a class="d-header__sublink" href="">個人株主検索</a><a
+                        class="d-header__sublink" href="">検索条件一覧</a><a class="d-header__sublink" href="">個人株主アクション設定</a><a
+                        class="d-header__sublink" href="">個人株主アクション設定一覧</a><a class="d-header__sublink" href="">議決権行使状態確認</a><a
+                        class="d-header__sublink" href="">株主ターゲティング</a><a class="d-header__sublink" href="">議決権行使結果一覧</a><a
+                        class="d-header__sublink" href="">議決権行使結果</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="d-header__notif">
+        <div class="d-header__notif-item"><img class="d-header__notif-icon" src="./img\icons\light-bulb.svg"
+                                               alt="Light Bulb"><span class="d-header__notif-number">999</span></div>
+        <div class="d-header__notif-item"><img class="d-header__notif-icon" src="./img\icons\messages.svg"
+                                               alt="Messages"><span class="d-header__notif-number d-header__notif-number--message">999</span></div>
+    </div>
+    <div class="header__hamburger"><span> </span><span> </span><span></span></div>
+</header>
+<!-- 以上ヘッダーの内容です -->
+<div class="breadcrumbs new-container">
+    <ul class="breadcrumbs__list breadcrumbs__list--new">
+        <li class="breadcrumbs__item"><a href="#">
+            <span class="material-icons home_icon">home</span></a> </li>
+        <li class="breadcrumbs__item"> <a href="#" class="new-item">プレミアム優待俱楽部</a></li>
+        <li class="breadcrumbs__item"> <span>パーソナルデータ変更申請</span></li>
+    </ul>
+</div>
+<div class="content-new new-page">
+    <div class="title-new new-container">
+        <h3>パーソナルデータ変更申請</h3>
+        <a class="button-new" href="#">ページヘルプ</a>
+    </div>
+    <div class="content__main new-container">
+        <div class="content__main--form pd_30">
+            <form action="" class="form">
+                <div class="form__input">
+                    <div class="form__input--left">
+                        <label for="name">氏名</label>
+                        <input type="text" id="name">
+                        <div class="form_input--group">
+                            <div class="form_input--row">
+                                <label for="country">国/都市</label>
+                                <input type="text" id="country">
+                            </div>
+                            <div class="form_input--row">
+                                <label for="day-month">誕生日年</label>
+                                <input type="text" id="day-month">
+                            </div>
+                            <div class="form_input--row">
+                                <label for="year">誕生日月</label>
+                                <input type="text" id="year">
+                            </div>
+                        </div>
+                        <label for="message">コメント・メモ</label>
+                        <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form__input--right">
+                        <label for="suffix">サフィックス</label>
+                        <input type="text" id="suffix">
+                        <label for="upload">画像</label>
+                        <div class="form__input--upload">
+                            <div class="form__input--display"></div>
+                            <div class="business__card--btn">
+                                <button type="upload" class="btn_upload_img">追加</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__area">
+                    <label for="profile">プロフィール</label>
+                    <textarea name="" id="profile" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="content__main--date pd_30">
+            <label for="upload">経歴</label>
+            <div class="content__main--action">
+                <div class="form-item">
+                    <div class="form-header">
+                        <div class="form_show">
+                            <i class="fas fa-caret-right"></i>
+                            <span class="date-from">YYYYMM</span> --
+                            <span class="date-to">YYYYMM</span>
+                        </div>
+                        <button type="button" class="delete-item-btn" data-izimodal-open="#modal-confirm-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                    <div class="form-content content__main--toogledate pd-30 form_toogle_content">
+                        <div class="js-bill subcontent" data-limit="20">
+                            <div class="js-clone-parent">
+                                <div class="js-clone-content subcontent__draggable">
+                                    <div class="form__label subcontent__label">
+                                        <div class="subcontent__label-inner">
+                                            <div class="date">
+                                                <input class="input__date form-date" type="text"
+                                                       placeholder="2021/07/01">
+                                                <input class="input__date to-date" type="text"
+                                                       placeholder="2021/07/01">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="active js-candidate-content1 subcontent__candidate">
+                                        <div class="js-candidate-forms">
+                                            <div class="form__subitem js-subitem">
+                                                <div class="subcontent__form-wrap">
+                                                    <div class="content__main--toogledate">
+                                                        <div class="toogledate__content">
+                                                            <div class="toogledate__text--content">
+                                                                <div class="toogledate__text--form">
+                                                                    <form action="" class="form_toogle">
+                                                                        <div class="form_toogle--group group_row--1">
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="company">所属会社</label>
+                                                                                <div class="form_toogle--input custom-select2 mb-8">
+                                                                                    <select class="js-select2-company">
+                                                                                        <option></option>
+                                                                                        <option value="1">TEST1</option>
+                                                                                        <option value="2">TEST2</option>
+                                                                                        <option value="3">TEST3</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="country-in-charge">担当地域/国</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="sector-in-charge">担当セクター</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form_toogle--group group_row--2">
+                                                                            <div class="form_toogle--row form_toogle--custom">
+                                                                                <div class="form_toogle--input">
+                                                                                    <label for="department">所属部署</label>
+                                                                                    <input type="text" id="department">
+                                                                                </div>
+                                                                                <div class="form_toogle--input">
+                                                                                    <label for="company">タイトル</label>
+                                                                                    <input type="text" id="company">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="company">担当商品</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form_toogle--group group_row--3">
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="email">Eメール</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text" id="email">
+                                                                                </div>
+                                                                                <label for="telephone">電話番号</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text" id="telephone">
+                                                                                </div>
+                                                                                <label for="telephone">ファックス</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text" id="telephone">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="business__card-image">名刺画像(表)</label>
+                                                                                <div class="business__card--upload">
+                                                                                    <div class="business__card--display">
+                                                                                    </div>
+                                                                                    <div class="business__card--btn">
+                                                                                        <button type="upload" class="btn_upload_img">追加</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="business__card-image">名刺画像(裏)</label>
+                                                                                <div class="business__card--upload">
+                                                                                    <div class="business__card--display">
+                                                                                    </div>
+                                                                                    <div class="business__card--btn">
+                                                                                        <button type="upload" class="btn_upload_img">追加</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="toogledate__text--search">
+                                                                    <label for="">取扱ファンド</label>
+                                                                    <div class="form__select-container js-personal-data">
+                                                                        <div class="form__select-content js-content-personal-data">
+                                                                            <div class="form__select-duplicate js-duplicate">
+                                                                                <div class="form__subitem">
+                                                                                    <div class="form__sublabel">
+                                                                                        <label class="js-label-ss">取扱ファンド</label>
+                                                                                    </div>
+                                                                                    <div class="flex form__input-subwrap custom-select2">
+                                                                                            <select class="js-select2-fund-manager input__text input__text--questionnaire" name="test[1]['question']">
+                                                                                                <option></option>
+                                                                                                <option value="1">TEST1</option>
+                                                                                                <option value="2">TEST2</option>
+                                                                                                <option value="3">TEST3</option>
+                                                                                            </select>
+                                                                                        <button class="hide js-delete-ss delete-item-count subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-contact"></button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="subcontent__shareholder-add subcontent__shareholder-add--mt10">
+                                                                            <button class="button gray js-add-ss rounded smaller" type="button">追加</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="toogledate__text--display">
+                                                                    <label for="">コンタクト履歴</label>
+                                                                    <span>回数</span>
+                                                                    <span><span class="count">1</span>回</span>
+                                                                    <div class="form__select-container js-personal-data-count">
+                                                                        <div class="form__select-content js-content-personal-data-count">
+                                                                            <div class="form__select-duplicate js-duplicate">
+                                                                                <div class="form__subitem">
+                                                                                    <div class="form__sublabel">
+                                                                                        <label class="js-label-ss">コンタクト履歴</label>
+                                                                                    </div>
+                                                                                    <div class="flex form__input-subwrap">
+                                                                                        <input class="input__date form-date" type="text" placeholder="2021/07/01">
+                                                                                        <button
+                                                                                                class="hide js-delete-ss subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-investment">
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="subcontent__shareholder-add subcontent__shareholder-add--flex-start subcontent__shareholder-add--mt10">
+                                                                            <button class="button gray js-add-ss rounded smaller" type="button">追加</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="form-header">
+                        <div class="form_show">
+                            <i class="fas fa-caret-right"></i>
+                            <span class="date-from">YYYYMM</span> --
+                            <span class="date-to">YYYYMM</span>
+                        </div>
+                        <button type="button" class="delete-item-btn" data-izimodal-open="#modal-confirm-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                    <div class="form-content content__main--toogledate pd-30 form_toogle_content">
+                        <div class="js-bill subcontent" data-limit="20">
+                            <div class="js-clone-parent">
+                                <div class="js-clone-content subcontent__draggable">
+                                    <div class="form__label subcontent__label">
+                                        <div class="subcontent__label-inner">
+                                            <div class="date">
+                                                <input class="input__date form-date" type="text"
+                                                       placeholder="2021/07/01">
+                                                <input class="input__date to-date" type="text"
+                                                       placeholder="2021/07/01">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="active js-candidate-content1 subcontent__candidate">
+                                        <div class="js-candidate-forms">
+                                            <div class="form__subitem js-subitem">
+                                                <div class="subcontent__form-wrap">
+                                                    <div class="content__main--toogledate">
+                                                        <div class="toogledate__content">
+                                                            <div class="toogledate__text--content">
+                                                                <div class="toogledate__text--form">
+                                                                    <form action="" class="form_toogle">
+                                                                        <div
+                                                                                class="form_toogle--group group_row--1">
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="company">所属会社</label>
+                                                                                <div class="form_toogle--input custom-select2 mb-8">
+                                                                                    <select class="js-select2-company">
+                                                                                        <option></option>
+                                                                                        <option value="1">TEST1</option>
+                                                                                        <option value="2">TEST2</option>
+                                                                                        <option value="3">TEST3</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="country-in-charge">担当地域/国</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="sector-in-charge">担当セクター</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                                class="form_toogle--group group_row--2">
+                                                                            <div
+                                                                                    class="form_toogle--row form_toogle--custom">
+
+                                                                                <div class="form_toogle--input">
+                                                                                    <label
+                                                                                            for="department">所属部署</label>
+                                                                                    <input type="text"
+                                                                                           id="department">
+                                                                                </div>
+                                                                                <div class="form_toogle--input">
+                                                                                    <label
+                                                                                            for="company">タイトル</label>
+                                                                                    <input type="text" id="company">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="company">担当商品</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                                class="form_toogle--group group_row--3">
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="email">Eメール</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text" id="email">
+                                                                                </div>
+                                                                                <label for="telephone">電話番号</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text"
+                                                                                           id="telephone">
+                                                                                </div>
+                                                                                <label for="telephone">ファックス</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text"
+                                                                                           id="telephone">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="business__card-image">名刺画像(表)</label>
+                                                                                <div class="business__card--upload">
+                                                                                    <div
+                                                                                            class="business__card--display">
+                                                                                    </div>
+                                                                                    <div
+                                                                                            class="business__card--btn">
+                                                                                        <button type="upload"
+                                                                                                class="btn_upload_img">追加</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="business__card-image">名刺画像(裏)</label>
+                                                                                <div class="business__card--upload">
+                                                                                    <div
+                                                                                            class="business__card--display">
+                                                                                    </div>
+                                                                                    <div
+                                                                                            class="business__card--btn">
+                                                                                        <button type="upload"
+                                                                                                class="btn_upload_img">追加</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="toogledate__text--search">
+                                                                    <label for="">取扱ファンド</label>
+                                                                    <div class="form__select-container js-personal-data">
+                                                                        <div class="form__select-content js-content-personal-data">
+                                                                            <div class="form__select-duplicate js-duplicate">
+                                                                                <div class="form__subitem">
+                                                                                    <div class="form__sublabel">
+                                                                                        <label class="js-label-ss">取扱ファンド</label>
+                                                                                    </div>
+                                                                                    <div class="flex form__input-subwrap custom-select2">
+                                                                                        <select class="js-select2-fund-manager input__text input__text--questionnaire" name="test[1]['question']">
+                                                                                            <option></option>
+                                                                                            <option value="1">TEST1</option>
+                                                                                            <option value="2">TEST2</option>
+                                                                                            <option value="3">TEST3</option>
+                                                                                        </select>
+                                                                                        <button class="hide js-delete-ss subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-contact"></button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="subcontent__shareholder-add subcontent__shareholder-add--mt10">
+                                                                            <button class="button gray js-add-ss rounded smaller"
+                                                                                    type="button">追加</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="toogledate__text--display">
+                                                                    <label for="">コンタクト履歴</label>
+                                                                    <span>回数</span>
+                                                                    <span><span class="count">1</span>回</span>
+                                                                    <div class="form__select-container js-personal-data-count">
+                                                                        <div class="form__select-content js-content-personal-data-count">
+                                                                            <div class="form__select-duplicate js-duplicate">
+                                                                                <div class="form__subitem">
+                                                                                    <div class="form__sublabel">
+                                                                                        <label class="js-label-ss">コンタクト履歴</label>
+                                                                                    </div>
+                                                                                    <div class="flex form__input-subwrap">
+                                                                                        <input class="input__date form-date" type="text" placeholder="2021/07/01">
+                                                                                        <button
+                                                                                                class="hide js-delete-ss subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-investment">
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="subcontent__shareholder-add subcontent__shareholder-add--flex-start subcontent__shareholder-add--mt10">
+                                                                            <button class="button gray js-add-ss rounded smaller" type="button">追加</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="form-header">
+                        <div class="form_show">
+                            <i class="fas fa-caret-right"></i>
+                            <span class="date-from">YYYYMM</span> --
+                            <span class="date-to">YYYYMM</span>
+                        </div>
+                        <button type="button" class="delete-item-btn" data-izimodal-open="#modal-confirm-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                    <div class="form-content content__main--toogledate pd-30 form_toogle_content">
+                        <div class="js-bill subcontent" data-limit="20">
+                            <div class="js-clone-parent">
+                                <div class="js-clone-content subcontent__draggable">
+                                    <div class="form__label subcontent__label">
+                                        <div class="subcontent__label-inner">
+                                            <div class="date">
+                                                <input class="input__date form-date" type="text"
+                                                       placeholder="2021/07/01">
+                                                <input class="input__date to-date" type="text"
+                                                       placeholder="2021/07/01">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="active js-candidate-content1 subcontent__candidate">
+                                        <div class="js-candidate-forms">
+                                            <div class="form__subitem js-subitem">
+                                                <div class="subcontent__form-wrap">
+                                                    <div class="content__main--toogledate">
+                                                        <div class="toogledate__content">
+                                                            <div class="toogledate__text--content">
+                                                                <div class="toogledate__text--form">
+                                                                    <form action="" class="form_toogle">
+                                                                        <div class="form_toogle--group group_row--1">
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="company">所属会社</label>
+                                                                                <div class="form_toogle--input custom-select2 mb-8">
+                                                                                    <select class="js-select2-company">
+                                                                                        <option></option>
+                                                                                        <option value="1">TEST1</option>
+                                                                                        <option value="2">TEST2</option>
+                                                                                        <option value="3">TEST3</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="country-in-charge">担当地域/国</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="sector-in-charge">担当セクター</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                                class="form_toogle--group group_row--2">
+                                                                            <div
+                                                                                    class="form_toogle--row form_toogle--custom">
+
+                                                                                <div class="form_toogle--input">
+                                                                                    <label
+                                                                                            for="department">所属部署</label>
+                                                                                    <input type="text"
+                                                                                           id="department">
+                                                                                </div>
+                                                                                <div class="form_toogle--input">
+                                                                                    <label
+                                                                                            for="company">タイトル</label>
+                                                                                    <input type="text" id="company">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="company">担当商品</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <select name="" id="">
+                                                                                        <option value="">option1
+                                                                                        </option>
+                                                                                        <option value="">option2
+                                                                                        </option>
+                                                                                        <option value="">option3
+                                                                                        </option>
+                                                                                        <option value="">option4
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                                class="form_toogle--group group_row--3">
+                                                                            <div class="form_toogle--row">
+                                                                                <label for="email">Eメール</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text" id="email">
+                                                                                </div>
+                                                                                <label for="telephone">電話番号</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text"
+                                                                                           id="telephone">
+                                                                                </div>
+                                                                                <label for="telephone">ファックス</label>
+                                                                                <div class="form_toogle--input">
+                                                                                    <input type="text"
+                                                                                           id="telephone">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="business__card-image">名刺画像(表)</label>
+                                                                                <div class="business__card--upload">
+                                                                                    <div
+                                                                                            class="business__card--display">
+                                                                                    </div>
+                                                                                    <div
+                                                                                            class="business__card--btn">
+                                                                                        <button type="upload"
+                                                                                                class="btn_upload_img">追加</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form_toogle--row">
+                                                                                <label
+                                                                                        for="business__card-image">名刺画像(裏)</label>
+                                                                                <div class="business__card--upload">
+                                                                                    <div
+                                                                                            class="business__card--display">
+                                                                                    </div>
+                                                                                    <div
+                                                                                            class="business__card--btn">
+                                                                                        <button type="upload"
+                                                                                                class="btn_upload_img">追加</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="toogledate__text--search">
+                                                                    <label for="">取扱ファンド</label>
+                                                                    <div class="form__select-container js-personal-data">
+                                                                        <div class="form__select-content js-content-personal-data">
+                                                                            <div class="form__select-duplicate js-duplicate">
+                                                                                <div class="form__subitem">
+                                                                                    <div class="form__sublabel">
+                                                                                        <label class="js-label-ss">取扱ファンド</label>
+                                                                                    </div>
+                                                                                    <div class="flex form__input-subwrap custom-select2">
+                                                                                        <select class="js-select2-fund-manager input__text input__text--questionnaire" name="test[1]['question']">
+                                                                                            <option></option>
+                                                                                            <option value="1">TEST1</option>
+                                                                                            <option value="2">TEST2</option>
+                                                                                            <option value="3">TEST3</option>
+                                                                                        </select>
+                                                                                        <button class="hide js-delete-ss subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-contact"></button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="subcontent__shareholder-add subcontent__shareholder-add--mt10">
+                                                                            <button class="button gray js-add-ss rounded smaller"
+                                                                                    type="button">追加</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="toogledate__text--display">
+                                                                    <label for="">コンタクト履歴</label>
+                                                                    <span>回数</span>
+                                                                    <span><span class="count">1</span>回</span>
+                                                                    <div class="form__select-container js-personal-data-count">
+                                                                        <div class="form__select-content js-content-personal-data-count">
+                                                                            <div class="form__select-duplicate js-duplicate">
+                                                                                <div class="form__subitem">
+                                                                                    <div class="form__sublabel">
+                                                                                        <label class="js-label-ss">コンタクト履歴</label>
+                                                                                    </div>
+                                                                                    <div class="flex form__input-subwrap">
+                                                                                        <input class="input__date form-date" type="text" placeholder="2021/07/01">
+                                                                                        <button
+                                                                                                class="hide js-delete-ss subcontent__button subcontent__button--close"data-izimodal-open="#modal-confirm-delete-investment">
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="subcontent__shareholder-add subcontent__shareholder-add--flex-start subcontent__shareholder-add--mt10">
+                                                                            <button class="button gray js-add-ss rounded smaller" type="button">追加</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__main--toogledate pd_30 click_display">
+            <div class="js-bill subcontent" data-limit="20">
+                <div class="js-clone-parent">
+                    <div class="js-clone-content subcontent__draggable">
+                        <div class="form__label subcontent__label">
+                            <div class="subcontent__label-inner">
+                                <div class="date">
+                                    <input class="input__date form-date" type="text" placeholder="2021/07/01">
+                                    <input class="input__date to-date" type="text" placeholder="2021/07/01">
+                                </div>
+                                <div class="subcontent__button-group"> <button class="js-duplicate-content subcontent__button"></button>
+                                    <button class="js-delete-content subcontent__button subcontent__button--close"></button> </div>
+                            </div>
+                            <div class="toogle_icon">
+                                <div class="search__input-wrap"> <label class="radio"> <input
+                                        class="has-name js-candidate-toggle js-checked" type="radio"
+                                        name="proposal2[1][candidate]" value="設定する" checked><span>画面</span> </label> </div>
+                                <div class="search__input-wrap"> <label class="radio"> <input
+                                        class="has-name js-candidate-toggle" type="radio" name="proposal2[1][candidate]"
+                                        value="設定しない"><span>隠れる</span> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="active js-candidate-content subcontent__candidate">
+                            <div class="js-candidate-forms">
+                                <div class="form__subitem js-subitem">
+                                    <div class="subcontent__form-wrap">
+                                        <div class="content__main--toogledate">
+                                            <div class="toogledate__content">
+                                                <div class="toogledate__text--content create-form">
+                                                    <div class="toogledate__text--form">
+                                                        <form action="" class="form_toogle">
+                                                            <div class="form_toogle--group group_row--1">
+                                                                <div class="form_toogle--row">
+                                                                    <label for="company">所属会社</label>
+                                                                    <div class="form_toogle--input custom-select2 mb-8">
+                                                                        <select class="js-select2-company">
+                                                                            <option></option>
+                                                                            <option value="1">TEST1</option>
+                                                                            <option value="2">TEST2</option>
+                                                                            <option value="3">TEST3</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_toogle--row">
+                                                                    <label for="country-in-charge">担当地域/国</label>
+                                                                    <div class="form_toogle--input">
+                                                                        <select name="" id="">
+                                                                            <option value="">option1</option>
+                                                                            <option value="">option2</option>
+                                                                            <option value="">option3</option>
+                                                                            <option value="">option4</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_toogle--row">
+                                                                    <label for="sector-in-charge">担当セクター</label>
+                                                                    <div class="form_toogle--input">
+                                                                        <select name="" id="">
+                                                                            <option value="">option1</option>
+                                                                            <option value="">option2</option>
+                                                                            <option value="">option3</option>
+                                                                            <option value="">option4</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_toogle--group group_row--2">
+                                                                <div class="form_toogle--row form_toogle--custom">
+                                                                    <div class="form_toogle--input">
+                                                                        <label for="department">所属部署</label>
+                                                                        <input type="text" id="department">
+                                                                    </div>
+                                                                    <div class="form_toogle--input">
+                                                                        <label for="company">タイトル</label>
+                                                                        <input type="text" id="company">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_toogle--row">
+                                                                    <label for="company">担当商品</label>
+                                                                    <div class="form_toogle--input">
+                                                                        <select name="" id="">
+                                                                            <option value="">option1</option>
+                                                                            <option value="">option2</option>
+                                                                            <option value="">option3</option>
+                                                                            <option value="">option4</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_toogle--group group_row--3">
+                                                                <div class="form_toogle--row">
+                                                                    <label for="email">Eメール</label>
+                                                                    <div class="form_toogle--input">
+                                                                        <input type="text" id="email">
+                                                                    </div>
+                                                                    <label for="telephone">電話番号</label>
+                                                                    <div class="form_toogle--input">
+                                                                        <input type="text" id="telephone">
+                                                                    </div>
+                                                                    <label for="telephone">ファックス</label>
+                                                                    <div class="form_toogle--input">
+                                                                        <input type="text" id="telephone">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_toogle--row">
+                                                                    <label for="business__card-image">名刺画像(表)</label>
+                                                                    <div class="business__card--upload">
+                                                                        <div class="business__card--display"></div>
+                                                                        <div class="business__card--btn">
+                                                                            <button type="upload" class="btn_upload_img">追加</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_toogle--row">
+                                                                    <label for="business__card-image">名刺画像(裏)</label>
+                                                                    <div class="business__card--upload">
+                                                                        <div class="business__card--display"></div>
+                                                                        <div class="business__card--btn">
+                                                                            <button type="upload" class="btn_upload_img">追加</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="toogledate__text--search">
+                                                        <label for="">取扱ファンド</label>
+                                                        <div class="form__select-container js-personal-data">
+                                                            <div class="form__select-content js-content-personal-data">
+                                                                <div class="form__select-duplicate js-duplicate">
+                                                                    <div class="form__subitem">
+                                                                        <div class="form__sublabel"> <label class="js-label-ss">取扱ファンド</label> </div>
+                                                                        <div class="flex form__input-subwrap custom-select2">
+                                                                            <select class="js-select2-fund-manager input__text input__text--questionnaire" name="test[1]['question']">
+                                                                                <option></option>
+                                                                                <option value="1">TEST1</option>
+                                                                                <option value="2">TEST2</option>
+                                                                                <option value="3">TEST3</option>
+                                                                            </select>
+                                                                            <button class="hide js-delete-ss subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-contact"></button> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="subcontent__shareholder-add subcontent__shareholder-add--mt10"> <button
+                                                                    class="button gray js-add-ss rounded smaller" type="button">追加</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="toogledate__text--display">
+                                                        <label for="">コンタクト履歴</label>
+                                                        <span>回数</span>
+                                                        <span><span class="count">1</span>回</span>
+                                                        <div class="form__select-container js-personal-data-count">
+                                                            <div class="form__select-content js-content-personal-data-count">
+                                                                <div class="form__select-duplicate js-duplicate">
+                                                                    <div class="form__subitem">
+                                                                        <div class="form__sublabel"> <label class="js-label-ss">コンタクト履歴</label> </div>
+                                                                        <div class="flex form__input-subwrap"> <input class="input__date form-date" type="text" placeholder="2021/07/01"> <button
+                                                                                class="hide js-delete-ss subcontent__button subcontent__button--close" data-izimodal-open="#modal-confirm-delete-investment"></button> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="subcontent__shareholder-add subcontent__shareholder-add--flex-start subcontent__shareholder-add--mt10">
+                                                                <button class="button gray js-add-ss rounded smaller" type="button">追加</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontent__add">
+                    <button class="button gray js-add-content rounded small">追加</button>
+                </div>
+            </div>
+        </div>
+        <div class="subcontent__add">
+            <button class="button gray js-add-content rounded small click">追加</button>
+        </div>
+
+        <div class="form__button-group form__button-group--p40 form__button-group--centered">
+            <button class="pointer bold button blue" data-izimodal-open="#updated-modal">保存</button>
+            <button class="pointer bold button tundora">クリア</button>
+        </div>
+    </div>
+</div>
+<div class="modal" id="updated-modal">
+    <div class="modal__container modal__container--40">
+        <div class="display__inner modal__header modal__header--no-border modal__header--wrap-sp">
+            <h1 class="text-center modal__title">パーソナルデータ変更します。</h1>
+        </div>
+        <div class="form__button-group form__button-group--centered">
+            <a class="pointer bold button blue">OK</a>
+            <a class="pointer bold button tundora" data-izimodal-close="">キャンセル</a>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-confirm-delete">
+    <div class="modal__container modal__container--40">
+        <div class="display__inner modal__header modal__header--no-border modal__header--wrap-sp">
+            <h1 class="text-center modal__title">パーソナルデータを変更します。</h1>
+        </div>
+        <div class="form__button-group form__button-group--centered">
+            <a class="pointer bold button blue btn-submit" data-izimodal-close="">OK</a>
+            <a class="pointer bold button tundora" data-izimodal-close="">キャンセル</a>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-confirm-delete-contact">
+    <div class="modal__container modal__container--40">
+        <div class="display__inner modal__header modal__header--no-border modal__header--wrap-sp">
+            <h1 class="text-center modal__title">このファンドを削除してもよろしいですか。</h1>
+        </div>
+        <div class="form__button-group form__button-group--centered">
+            <a class="pointer bold button blue btn-submit-ct" data-izimodal-close="">OK</a>
+            <a class="pointer bold button tundora" data-izimodal-close="">キャンセル</a>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-confirm-delete-investment">
+    <div class="modal__container modal__container--40">
+        <div class="display__inner modal__header modal__header--no-border modal__header--wrap-sp">
+            <h1 class="text-center modal__title">このコンタクト履歴を削除してもよろしいですか。</h1>
+        </div>
+        <div class="form__button-group form__button-group--centered">
+            <a class="pointer bold button blue btn-submit-ct" data-izimodal-close="">OK</a>
+            <a class="pointer bold button tundora" data-izimodal-close="">キャンセル</a>
+        </div>
+    </div>
+</div>
+<!-- 以上ホーム>マイリスト>マイリスト登録者検索・マイリスト一覧 の（headerとfooterを除いたmainパート）内容です -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/izimodal-1.6.0@1.6.1/js/iziModal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="./js/datepicker-ja.65d1566f.js"></script>
+<script src="./js\index.js"></script>
+<script>
+    $("#updated-modal").iziModal();
+    $("#modal-confirm-delete").iziModal();
+    $("#modal-confirm-delete-contact").iziModal();
+    $("#modal-confirm-delete-investment").iziModal();
+    $(document).on('focusin', '.input__date', function (){
+        $(this).removeAttr('id').removeClass('hasDatepicker');
+        $(this).datepicker({ minDate: 0 });
+    })
+    $(document).ready(function() {
+
+        renderSelect2($('.js-select2-company'), '選択してください');
+        renderSelect2($('.js-select2-fund-manager'), '回答選択肢を入力（必須）');
+
+        $(document).on('click', '.js-add-content', function () {
+            let select2CompanyLast = $('body').find('.js-select2-company').last();
+            let select2FundManagerLast = $('body').find('.js-select2-fund-manager').last();
+
+            select2CompanyLast.siblings('.select2').remove();
+            renderSelect2(select2CompanyLast, '選択してください');
+            select2FundManagerLast.siblings('.select2').remove();
+            renderSelect2(select2FundManagerLast, '回答選択肢を入力（必須）');
+        })
+        $(document).on('click', '.js-add-ss', function (){
+            let select2Last = $(this).parents('.form__select-container').find('.js-select2-fund-manager').last();
+            select2Last.siblings('.select2').remove();
+            renderSelect2(select2Last, '回答選択肢を入力（必須）');
+        })
+
+        $(".form_show").click(function () {
+            $header = $(this);
+            $content = $(this).parents('div[class=form-item]').find('.form_toogle_content');
+            $content.slideToggle(500);
+        });
+
+        $(".form-item").each(function (index, element) {
+            var selectedItem = $(this);
+            selectedItem.attr("id", `form-item-${index}`);
+            selectedItem.find(".form-date").change(function (i) {
+                var outputFromDatePicker = $(this).val();
+                selectedItem.find(".date-from").text(outputFromDatePicker);
+            });
+            selectedItem.find(".to-date").change(function (i) {
+                var outputToDatePicker = $(this).val();
+                selectedItem.find(".date-to").text(outputToDatePicker);
+            });
+
+            selectedItem.find(".delete-item-btn").click(function (i) {
+                $('.btn-submit').click(function(){
+                    selectedItem.remove();
+                })
+            });
+        });
+
+        $(".click").click(function(){
+            $(".click_display").show();
+            $(".click").css('display','none');
+        });
+    });
+    function renderSelect2(select2, placeholder) {
+        select2.select2({
+            placeholder: placeholder,
+        });
+    }
+</script>
+</body>
+</html>
