@@ -1048,6 +1048,12 @@
             $content.slideToggle(500);
         });
 
+        let deleteItem = null
+
+        $(".tundora").click(() => {
+            deleteItem = null
+        })
+
         $(".form-item").each(function (index, element) {
             var selectedItem = $(this);
             selectedItem.attr("id", `form-item-${index}`);
@@ -1061,8 +1067,9 @@
             });
 
             selectedItem.find(".delete-item-btn").click(function (i) {
+                deleteItem = selectedItem
                 $('.btn-submit').click(function(){
-                    selectedItem.remove();
+                    deleteItem && deleteItem.remove();
                 })
             });
         });
