@@ -1553,6 +1553,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   })
                 });
 
+                var closeBtns = [...document.getElementsByClassName("close-ct")]
+                closeBtns.forEach(btn => btn.addEventListener("click", () => {
+                  deleteItem = null
+                  parent = null
+                }))
+
                 if (parent1.classList.contains("js-personal-data-count")) {
                   const numItems1 = $(parent1).find(".form__subitem")
                   $(parent1).prev()[0].innerHTML = `<span class="count">${numItems1.length}</span>回`
@@ -2811,6 +2817,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                   })
                 });
 
+                var closeBtns = [...document.getElementsByClassName("close-ct")]
+                closeBtns.forEach(btn => btn.addEventListener("click", () => {
+                  deleteItem = null
+                  parent = null
+                }))
+
                 if (parent1.classList.contains("js-personal-data-count")) {
                   const numItems1 = $(parent1).find(".form__subitem")
                   $(parent1).prev()[0].innerHTML = `<span class="count">${numItems1.length}</span>回`
@@ -2859,6 +2871,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     if (clone) {
                       if (isPersonalData) {
                         $('.btn-submit-ct').click(function () {
+                          console.log({ deleteItem })
                           deleteItem && deleteItem.remove()
                           hideIndex();
                         })
